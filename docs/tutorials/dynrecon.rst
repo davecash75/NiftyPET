@@ -229,6 +229,9 @@ In most cases the injection is performed with some delay relative to the time of
    .. code-block:: python
 
       # histogram the list mode data (in <datain> dictionary) using scanner parameters (<mMRpars>)
+      # Note this hist is for the whole static image. It cannot serve as an output for a 
+      # dynamic reconstruction using mmrchain later in the code when you want to reconstruct
+      # with the correct time offset.
       hst = nipet.mmrhist(datain, mMRpars)
 
       # offset for the time from which meaningful events are detected
